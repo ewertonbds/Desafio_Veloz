@@ -75,7 +75,7 @@ header {
     justify-content: center;
 }
 
-#country-list {
+#lista-pais {
     display: flex;
     flex-wrap: wrap;
 }
@@ -123,9 +123,15 @@ header {
 .country img {
     width: 100%;
     height: auto;
+    object-fit: cover;
 }
 
-#country-details {
+#detalhes-pais {
     margin-top: 20px;
-    background-color: white;
+    color: #eeebed;
+}
+
+#detalhes-pais img{
+  width: 300px;
+
 }
