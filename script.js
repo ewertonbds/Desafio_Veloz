@@ -46,7 +46,7 @@ function mostrarDetalhesPais(country) {
 
 function voltar() {
     //Retorna pra o site anterior
-    listaPais.style.display = 'block';
+    listaPais.style.display = 'flex';
     detalhesPais.style.display = 'none';
 }
 
