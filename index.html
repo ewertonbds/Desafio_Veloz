@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Países</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    select {
+        padding: 10px;
+      font-size: 16px;
+      border: 1px solid #e0138c;
+    }
+    
+    option {
+      font-size: 14px;
+      padding: 5px;
+      margin: 2px;
+      border: 1px solid #e0138c;
+    }
+      </style>
+</head>
+<body>
+    <header>
+        <h1>Lista de Países</h1>
+        <form>
+            <input name="name" id="busca" autocomplete="off" required />
+            <label for="name">
+                <span>Buscar por país...</span>
+            </label>
+          </form>
+    </header>
+    <main>
+        <div id="filters">
+            <select id="filtro-regiao">
+                <option value="">Filtrar por Região</option>
+                <option value="Africa">África</option>
+                <option value="Americas">Américas</option>
+                <option value="Asia">Ásia</option>
+                <option value="Europe">Europa</option>
+                <option value="Oceania">Oceania</option>
+            </select>
+        </div>
+        <div id="lista-pais"></div>
+        <div id="detalhes-pais"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

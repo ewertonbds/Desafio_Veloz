@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+body {
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: url(.//bg.jpeg);
+    background-size: 50%;
+}
+
+input {
+    color: #fff;
+    font-size: 28px;
+    width: 100%;
+    padding: 10px 5px 5px;
+    background-color: #4f4f4f;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  label {
+    color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  span {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+  }
+
+  form {
+    overflow: hidden;
+    position: relative;
+    width: 50%;
+  }
+
+  label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #e0138c;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+  }
+  
+  input:focus + label span,
+  input:valid + label span {
+    transform: translateY(-150%);
+    font-size: 14px;
+    bottom: 10px;
+    color: #e0138c;
+  }
+  
+  input:focus + label::after,
+  input:valid + label::after {
+    transform: translateX(0%);
+  }
+
+header {
+    margin-bottom: 20px;
+    color: #eeebed;
+    text-align: center;
+    justify-content: center;
+}
+
+#country-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.country {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 10rem;
+    display: inline-block;
+    cursor: pointer;
+    background-color: white;
+    transition: .2s;
+}
+
+.country:hover {
+    color: #e0138c;
+}
+
+@media(min-width: 480px){
+    .country{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media(min-width: 768px){
+    .country{
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+}
+
+@media(min-width: 1280px){
+    .country{
+        grid-template-columns: repeat(6, 1fr);
+
+    }
+    
+
+}
+
+.country img {
+    width: 100%;
+    height: auto;
+}
+
+#country-details {
+    margin-top: 20px;
+    background-color: white;
+}
